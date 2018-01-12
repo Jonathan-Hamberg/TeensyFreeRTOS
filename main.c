@@ -117,9 +117,9 @@ static void exampleTaskHandler( void *pvParameters )
 	for (;;)
 	{
 		GPIOC_PSOR = ( 1 << 5 );
-		dumbdelay_ms( 100 );
+		dumbdelay_ms( 500 );
 		GPIOC_PCOR = ( 1 << 5 );
-		dumbdelay_ms( 100 );
+		dumbdelay_ms( 500 );
 	}
 }
 

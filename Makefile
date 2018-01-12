@@ -39,7 +39,7 @@ TEENSY3X_BASEPATH = .
 #  If your toolchain supports other targets, those target
 #  folders should be at the same level in the toolchain as
 #  the arm-none-eabi folders.
-TARGETTYPE = /usr/lib/arm-none-eabi/lib/thumb
+TARGETTYPE = C:\tools\gcc-arm-none-eabi\arm-none-eabi\lib\thumb
 
 #  Describe the various include and source directories needed.
 #  These usually point to files from whatever distribution
@@ -73,7 +73,7 @@ DEBUG = -g
 
 #  List the directories to be searched for libraries during linking.
 #  Optionally, list archives (libxxx.a) to be included during linking. 
-LIBDIRS  = -LC:\tools\gcc-arm-none-eabi\arm-none-eabi\lib\thumb
+LIBDIRS  = -LC:/tools/gcc-arm-none-eabi/arm-none-eabi/lib/thumb
 LIBS = -lc
 
 #  Compiler options
