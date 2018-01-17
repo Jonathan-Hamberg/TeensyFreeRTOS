@@ -21,7 +21,7 @@
  *  Declare these variables as extern in other modules if you need access
  *  to the actual system clock frequencies.
  */
-int32_t			mcg_clk_hz;
+int32_t 		mcg_clk_hz;
 int32_t			mcg_clk_khz;
 int32_t			core_clk_khz;
 int32_t			periph_clk_khz;
