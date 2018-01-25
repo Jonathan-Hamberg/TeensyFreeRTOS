@@ -16,7 +16,7 @@ add_executable(${PROJECT_NAME}.elf
         src/main.c
         src/sysinit.c
         src/arm_cm4.c
-        src/FreeRTOSConfig.h
+        src/freertos/FreeRTOSConfig.h
         src/freertos/tasks.c
         src/freertos/list.c
         src/freertos/heap_2.c
@@ -48,7 +48,7 @@ add_executable(${PROJECT_NAME}.elf
         src/include/uart.h
         src/include/wdog.h)
 
-target_link_libraries(${PROJECT_NAME}.elf "C:/Program Files (x86)/Arduino/hardware/tools/arm/arm-none-eabi/lib/armv7e-m/libc.a")
+target_link_libraries(${PROJECT_NAME}.elf "C:/Program Files (x86)/Arduino/hardware/tools/arm/arm-none-eabi/lib/armv7e-m/libc_nano.a")
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
         COMMAND ${CMAKE_OBJCOPY} -O ihex -R .eeprom ${PROJECT_NAME}.elf ${PROJECT_NAME}.hex

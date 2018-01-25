@@ -10,10 +10,9 @@
 static __inline__ void dumbdelay_ms(uint32_t ms );
 
 static void taskLed(void *pvParameters) {
+
     for(;;){
-        GPIOC_PCOR |= (1 << 5);
-        vTaskDelay(100);
-        GPIOC_PSOR |= (1 << 5);
+        GPIOC_PTOR |= (1 << 5);
         vTaskDelay(100);
     }
 }
@@ -102,7 +101,22 @@ static __inline__ void dumbdelay_ms( const uint32_t ms )
  */
 void HardFault_Handler()
 {
-
+    for(;;) {
+        GPIOC_PCOR |= (1 << 5);
+        dumbdelay_ms(100);
+        GPIOC_PSOR |= (1 << 5);
+        dumbdelay_ms(100);
+        GPIOC_PCOR |= (1 << 5);
+        dumbdelay_ms(100);
+        GPIOC_PSOR |= (1 << 5);
+        dumbdelay_ms(100);
+        GPIOC_PCOR |= (1 << 5);
+        dumbdelay_ms(100);
+        GPIOC_PSOR |= (1 << 5);
+        dumbdelay_ms(100);
+        GPIOC_PCOR |= (1 << 5);
+        dumbdelay_ms(1000);
+    }
 }
 
 /**
